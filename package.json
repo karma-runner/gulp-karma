@@ -1,0 +1,21 @@
+{
+  "name": "gulp-karma",
+  "version": "0.0.1",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/karma-runner/gulp-karma"
+  },
+  "bugs": {
+    "url": "https://github.com/karma-runner/gulp-karma/issues"
+  },
+  "homepage": "https://github.com/karma-runner/gulp-karma",
+  "devDependencies": {
+    "karma": "~0.12.3",
+    "karma-jasmine": "~0.2.2",
+    "karma-chrome-launcher": "~0.1.3",
+    "gulp": "~3.6.0",
+    "gulp-util": "~2.2.14",
+    "lodash": "~2.4.1"
+  }
+}
