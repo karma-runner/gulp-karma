@@ -34,4 +34,4 @@ gulp.task('tdd', function () {
   karma.start(karmaCommonConf, karmaExit);
 });
 
-gulp.task('default', ['test']);
+gulp.task('default', ['tdd']);
