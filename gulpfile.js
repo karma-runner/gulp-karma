@@ -2,16 +2,8 @@ var gulp = require('gulp');
 var _ = require('lodash');
 var karma = require('karma').server;
 
-//one could also externalize common config into a separate file,
-//ex.: var karmaCommonConf = require('./karma-common-conf.js');
-var karmaCommonConf = {
-  browsers: ['Chrome'],
-  frameworks: ['jasmine'],
-  files: [
-    'src/**/*.js',
-    'test/**/*.spec.js'
-  ]
-};
+//externalized common config into a separate file
+var karmaCommonConf = require('./karma-common-conf.js');
 
 /**
  * Run test once and exit
