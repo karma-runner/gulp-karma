@@ -4,7 +4,31 @@
 
 > [Karma](https://github.com/karma-runner/karma) integration into [Gulp.js](http://gulpjs.com/)-based build.
 
-This repository contains instructions and samples illustrating how to use karma-runner from the Gulp.js based build.
+## tl;dr;
+
+You don't need any gulp plugins ([why?](https://github.com/karma-runner/gulp-karma#do-we-need-a-plugin)) to run Karma from the Gulp-based build, use Karma directly:
+
+```javascript
+var gulp = require('gulp');
+var karma = require('karma').server;
+
+/**
+ * Run test once and exit
+ */
+gulp.task('test', function (done) {
+  karma.start({
+    configFile: __dirname + '/karma.conf.js',
+    singleRun: true
+  }, done);
+});
+```
+
+## Illustrated tasks
+
+This sample project illustrates 2 usage scenarios of Karma integration in the Gulp.js build:
+
+* `gulp test` - a task that runs all the tests with Karma once and exits. Such a task is often used on CI servers etc.
+* `gulp tdd` - a task that runs the tests and pauses, watching for file changes. Upon detecting a change Karma re-runs the tests. Such a task is often during development.
 
 ## Do we need a plugin?
 
@@ -18,9 +42,3 @@ To see how easy is to integrate Karma into an existing Gulp.js build just check 
 There are several people moving from Grunt.js to Gulp.js who noticed that with Gulp we often don't need a dedicated plugin anymore.
 For example, a good overview of such situation can be found in the [following article](http://blog.overzealous.com/post/74121048393/why-you-shouldnt-create-a-gulp-plugin-or-how-to-stop).
 
-## Illustrated tasks
-
-This sample project illustrates 2 usage scenarios of Karma integration in the Gulp.js build:
-
-* `gulp test` - a task that runs all the tests with Karma once and exits. Such a task is often used on CI servers etc.
-* `gulp tdd` - a task that runs the tests and pauses, watching for file changes. Upon detecting a change Karma re-runs the tests. Such a task is often during development.
