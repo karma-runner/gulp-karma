@@ -19,7 +19,9 @@ gulp.task('test', function (done) {
   karma.start({
     configFile: __dirname + '/karma.conf.js',
     singleRun: true
-  }, done);
+  }, function () {
+    done(); 
+  });
 });
 ```
 
