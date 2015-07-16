@@ -10,16 +10,16 @@ You don't need any gulp plugins ([why?](https://github.com/karma-runner/gulp-kar
 
 ```javascript
 var gulp = require('gulp');
-var karma = require('karma').server;
+var Server = require('karma').Server;
 
 /**
  * Run test once and exit
  */
 gulp.task('test', function (done) {
-  karma.start({
+  new Server({
     configFile: __dirname + '/karma.conf.js',
     singleRun: true
-  }, done);
+  }, done).start();
 });
 ```
 
@@ -28,7 +28,7 @@ gulp.task('test', function (done) {
 This sample project illustrates 2 usage scenarios of Karma integration in the Gulp.js build:
 
 * `gulp test` - a task that runs all the tests with Karma once and exits. Such a task is often used on CI servers etc.
-* `gulp tdd` - a task that runs the tests and pauses, watching for file changes. Upon detecting a change Karma re-runs the tests. Such a task is often during development.
+* `gulp tdd` - a task that runs the tests and pauses, watching for file changes. Upon detecting a change Karma re-runs the tests. Such a task is often used during development.
 
 ## Do we need a plugin?
 
