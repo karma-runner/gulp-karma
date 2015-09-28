@@ -23,7 +23,7 @@ gulp.task('test', function (done) {
 
   server.on('run_complete', function (browsers, results) {
     done(results.error ? 'There are test failures' : null);
-  }
+  });
 
   server.start();
 });
