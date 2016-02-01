@@ -9,6 +9,9 @@
   "bugs": {
     "url": "https://github.com/karma-runner/gulp-karma/issues"
   },
+  "scripts": {
+    "test": "gulp test"
+  },
   "homepage": "https://github.com/karma-runner/gulp-karma",
   "devDependencies": {
     "jasmine": "^2.4.1",
