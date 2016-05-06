@@ -34,7 +34,7 @@ This sample project illustrates 2 usage scenarios of Karma integration in the Gu
 
 While there exist integration of the karma-runner into [Grunt](http://gruntjs.com/) based builds (https://github.com/karma-runner/grunt-karma)
 we've decided _not_ to create a dedicated plugin for Gulp.js. The reasoning here is that it is very, very easy to
-invoke Karma's [public API](http://karma-runner.github.io/0.12/dev/public-api.html) directly from a Gulp.js task, as illustrated in this repository. Writing a dedicated plugin
+invoke Karma's [public API](http://karma-runner.github.io/0.13/dev/public-api.html) directly from a Gulp.js task, as illustrated in this repository. Writing a dedicated plugin
 would bring little benefit and could limit possible usage scenarios.
 
 To see how easy is to integrate Karma into an existing Gulp.js build just check the included [gulpfile.js](gulpfile.js).
