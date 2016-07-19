@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var gutils = require('gulp-util');
 var Server = require('karma').Server;
 
 /**
@@ -8,7 +9,16 @@ gulp.task('test', function (done) {
   new Server({
     configFile: __dirname + '/karma.conf.js',
     singleRun: true
-  }, done).start();
+  }, function(err){
+        if(err === 0){
+            done();
+        } else {
+            var msg = err > 1 ? 'Tests' : 'Test';
+            done(new gutils.PluginError('karma', {
+                message: "" + err + ' ' + msg + ' failed'
+            }));
+        }
+    }).start();
 });
 
 /**
