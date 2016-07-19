@@ -14,10 +14,11 @@
   },
   "homepage": "https://github.com/karma-runner/gulp-karma",
   "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-util": "^3.0.7",
     "jasmine": "^2.4.1",
     "karma": "1.x || ^0.13.0",
-    "karma-jasmine": "1.x || ^0.3.6",
     "karma-chrome-launcher": "1.x || ^0.2.0",
-    "gulp": "^3.9.0"
+    "karma-jasmine": "1.x || ^0.3.6"
   }
 }
